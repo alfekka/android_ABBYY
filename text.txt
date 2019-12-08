@@ -1,0 +1,27 @@
+Astronomers catch wind rushing out of galaxy
+Researchers observe huge outflow of gas extending far beyond a galaxy for the first time
+Exploring the influence of galactic winds from a distant galaxy called Makani, UC San Diego's Alison Coil, Rhodes College's David Rupke and a group of collaborators from around the world made a novel discovery. Published in Nature, their study's findings provide direct evidence for the first time of the role of galactic winds -- ejections of gas from galaxies -- in creating the circumgalactic medium (CGM). It exists in the regions around galaxies, and it plays an active role in their cosmic evolution. The unique composition of Makani -- meaning wind in Hawaiian -- uniquely lent itself to the breakthrough findings.
+
+"Makani is not a typical galaxy," noted Coil, a physics professor at UC San Diego. "It's what's known as a late-stage major merger -- two recently combined similarly massive galaxies, which came together because of the gravitational pull each felt from the other as they drew nearer. Galaxy mergers often lead to starburst events, when a substantial amount of gas present in the merging galaxies is compressed, resulting in a burst of new star births. Those new stars, in the case of Makani, likely caused the huge outflows -- either in stellar winds or at the end of their lives when they exploded as supernovae."
+
+Coil explained that most of the gas in the universe inexplicably appears in the regions surrounding galaxies -- not in the galaxies. Typically, when astronomers observe a galaxy, they are not witnessing it undergoing dramatic events -- big mergers, the rearrangement of stars, the creation of multiple stars or driving huge, fast winds.
+
+"While these events may occur at some point in a galaxy's life, they'd be relatively brief," noted Coil. "Here, we're actually catching it all right as it's happening through these huge outflows of gas and dust."
+
+Coil and Rupke, the paper's first author, used data collected from the W. M. Keck Observatory's new Keck Cosmic Web Imager (KCWI) instrument, combined with images from the Hubble Space Telescope and the Atacama Large Millimeter Array (ALMA), to draw their conclusions. The KCWI data provided what the researchers call the "stunning detection" of the ionized oxygen gas to extremely large scales, well beyond the stars in the galaxy. It allowed them to distinguish a fast gaseous outflow launched from the galaxy a few million year ago, from a gas outflow launched hundreds of millions of years earlier that has since slowed significantly.
+
+"The earlier outflow has flowed to large distances from the galaxy, while the fast, recent outflow has not had time to do so," summarized Rupke, associate professor of physics at Rhodes College.
+
+From the Hubble, the researchers procured images of Makani's stars, showing it to be a massive, compact galaxy that resulted from a merger of two once separate galaxies. From ALMA, they could see that the outflow contains molecules as well as atoms. The data sets indicated that with a mixed population of old, middle-age and young stars, the galaxy might also contain a dust-obscured accreting supermassive black hole. This suggests to the scientists that Makani's properties and timescales are consistent with theoretical models of galactic winds.
+
+"In terms of both their size and speed of travel, the two outflows are consistent with their creation by these past starburst events; they're also consistent with theoretical models of how large and fast winds should be if created by starbursts. So observations and theory are agreeing well here," noted Coil.
+
+Rupke noticed that the hourglass shape of Makani's nebula is strongly reminiscent of similar galactic winds in other galaxies, but that Makani's wind is much larger than in other observed galaxies.
+
+"This means that we can confirm it's actually moving gas from the galaxy into the circumgalactic regions around it, as well as sweeping up more gas from its surroundings as it moves out," Rupke explained. "And it's moving a lot of it -- at least one to 10 percent of the visible mass of the entire galaxy -- at very high speeds, thousands of kilometers per second."
+
+Rupke also noted that while astronomers are converging on the idea that galactic winds are important for feeding the CGM, most of the evidence has come from theoretical models or observations that don't encompass the entire galaxy.
+
+"Here we have the whole spatial picture for one galaxy, which is a remarkable illustration of what people expected," he said. "Makani's existence provides one of the first direct windows into how a galaxy contributes to the ongoing formation and chemical enrichment of its CGM."
+
+This study was supported by the National Science Foundation (collaborative grant AST-1814233, 1813365, 1814159 and 1813702), NASA (award SOF-06-0191, issued by USRA), Rhodes College and the Royal Society.
