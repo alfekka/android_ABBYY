@@ -11,11 +11,11 @@ class NoteFragment : Fragment() {
     companion object {
         private const val NOTE_ID = "noteId"
 
-        fun newInstance(id: Long): NoteFragment {
+        fun newInstance(id: Int): NoteFragment {
             val fragment = NoteFragment()
             val args = Bundle()
             if (id != null) {
-                args.putLong(NOTE_ID, id)
+                args.putInt(NOTE_ID, id)
             }
             fragment.arguments = args
             return fragment

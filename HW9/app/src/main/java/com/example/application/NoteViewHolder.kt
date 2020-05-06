@@ -4,6 +4,7 @@ import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 import com.example.application.data.Note
 import java.text.SimpleDateFormat
+import kotlinx.android.synthetic.main.note_list_item.view.*
 
 class NoteViewHolder(itemView: View, private val clickHandler: (Int) -> Unit):
     RecyclerView.ViewHolder(itemView), View.OnClickListener {
