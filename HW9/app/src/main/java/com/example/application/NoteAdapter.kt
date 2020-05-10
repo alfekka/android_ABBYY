@@ -1,9 +1,9 @@
 package com.example.application
 
+import com.example.application.data.Note
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.application.data.Note
 
 
 class NoteAdapter(private val notes: List<Note>, private val clickHandler: (Int) -> Unit):
