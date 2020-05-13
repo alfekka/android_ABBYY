@@ -23,6 +23,7 @@ class MainActivity : AppCompatActivity(), NoteListFragment.OpenNoteListener {
         setContentView(R.layout.activity_main)
         title = getString(R.string.notes_title)
 
+
         val oldNote = supportFragmentManager.findFragmentByTag(NOTE_FRAGMENT_TAG) as? NoteFragment
         if (oldNote != null) {
             oldNote.getNoteId()?.let {

@@ -8,13 +8,13 @@ import androidx.fragment.app.Fragment
 import kotlinx.android.synthetic.main.fragment_note.view.*
 import kotlinx.coroutines.*
 
-apply plugin: 'kotlin'
-
-kotlin {
-    experimental {
-        coroutines 'enable'
-    }
-}
+//apply plugin: 'kotlin'
+//
+//kotlin {
+//    experimental {
+//        coroutines 'enable'
+//    }
+//}
 
 class NoteFragment : Fragment() {
 
@@ -32,7 +32,7 @@ class NoteFragment : Fragment() {
         }
     }
 
-    var thread: Thread? = null
+    var job: Job? = null
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -42,26 +42,30 @@ class NoteFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_note, container, false)
     }
 
+    fun getNoteId(): Int? = arguments?.getInt(NOTE_ID)
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         //val note = App.noteRepository.getNoteWithId(arguments?.getInt(NOTE_ID, 1) ?: 1)
         val noteId = arguments?.getInt(NOTE_ID, 1) ?: 1
-        thread = GlobalScope.launch(context = Dispatchers.Main) {
-            val note = queryNote(noteId)
+        job = GlobalScope.launch(context = Dispatchers.Main) {
+            val note = NoteQues(noteId)
             if (note != null) {
-            view.noteText.text = note.text
-            view.noteImage.setImageDrawable(activity?.getDrawable(note.drawableRes))
+                view.noteText.text = note.text
+                view.noteImage.setImageDrawable(activity?.getDrawable(note.drawableRes))
+            }
         }
+
+//    fun getNoteId(): Int? = arguments?.getInt(NOTE_ID)
+
     }
 
-    fun getNoteId(): Int? = arguments?.getInt(NOTE_ID)
-
-}
-    suspend fun NoteQues(id:Int)= withContext(Dispatchers.IO) {
+    suspend fun NoteQues(id: Int) = withContext(Dispatchers.IO) {
         return@withContext App.noteRepository.getNoteWithId(id)
     }
 
     override fun shutup() {
         super.shutup()
-        thread?.cancel()
+        job?.cancel()
     }
+}

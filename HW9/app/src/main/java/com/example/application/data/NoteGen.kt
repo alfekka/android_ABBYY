@@ -17,17 +17,20 @@ object NoteGen {
 
     private const val SQL_NOTES_CREATE =
         "CREATE TABLE $TABLE_NAME (" +
-                "${Columns._ID} INTEGER PRIMARY KEY AUTOINCREMENT," +
+                "${BaseColumns._ID} INTEGER PRIMARY KEY AUTOINCREMENT," +
                 "${NoteEntry.TEXT} TEXT NOT NULL," +
-                "${NoteEntry.DATE} INTEGER NOT NULL," +
+                "${NoteEntry.DEADLINE} INTEGER NOT NULL," +
                 "${NoteEntry.IMAGE_ID} INTEGER NOT NULL)"
+
+    private val NOTE_LIST: List<Triple<Long, String, Int>> = listOf(
+            )
 
 
     fun createTable(db: SQLiteDatabase?) {
         if (db === null) {
             return
         }
-        db.execSQL(SQL_CREATE_TABLE)
+        db.execSQL(SQL_NOTES_CREATE)
         NOTE_LIST.forEach {
             val values = ContentValues()
             values.put(NoteEntry.TEXT, it.first)

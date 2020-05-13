@@ -17,7 +17,6 @@ class AppSqliteOpenHelper(context: Context?) :
     }
 
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
-        // ¯\_(ツ)_/¯
     }
 
 }

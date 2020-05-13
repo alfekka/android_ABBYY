@@ -1,7 +1,7 @@
 package com.example.application.data
 
 import android.database.sqlite.SQLiteOpenHelper
-import android.provider.Columns
+import android.provider.BaseColumns
 import java.util.*
 import android.content.ContentValues
 import android.database.sqlite.SQLiteDatabase
@@ -14,7 +14,7 @@ class NoteRepository(private val helper: SQLiteOpenHelper) {
 
     companion object {
         private val NOTE_PROJECTION = arrayOf(
-            Columns._ID,
+            BaseColumns._ID,
             NoteGen.NoteEntry.TEXT,
             NoteGen.NoteEntry.DEADLINE,
             NoteGen.NoteEntry.IMAGE_ID

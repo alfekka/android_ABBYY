@@ -14,7 +14,7 @@ class NoteListFragment : Fragment() {
         fun openNote(id: Int)
     }
 
-    var thread: Thread? = null
+    var job: Job? = null
 
 
     override fun onCreateView(
@@ -22,30 +22,33 @@ class NoteListFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        super.onCreateView(inflater, container, savedInstanceState)
         val view = inflater.inflate(R.layout.fragment_main, container, false)
         val recyclerView = view.findViewById<RecyclerView>(R.id.recyclerView)
-//        recyclerView.setHasFixedSize(true)
         recyclerView.adapter = NoteAdapter(emptyList()) {}
-        threads = GlobalScope.launch(context = Dispatchers.Main) {
+        job = GlobalScope.launch(context = Dispatchers.Main) {
+//        super.onCreateView(inflater, container, savedInstanceState)
+//        val view = inflater.inflate(R.layout.fragment_main, container, false)
+//        val recyclerView = view.findViewById<RecyclerView>(R.id.recyclerView)
+////        recyclerView.setHasFixedSize(true)
+//        recyclerView.adapter = NoteAdapter(emptyList()) {}
             val notes = NoteQues()
-        recyclerView.adapter = NoteAdapter(App.noteRepository.listNotes()) {
-            val listener = activity as OpenNoteListener
-            listener.openNote(it)
+            recyclerView.adapter = NoteAdapter(App.noteRepository.listNotes()) {
+                val listener = activity as OpenNoteListener
+                listener.openNote(it)
+            }
+
+            return view
         }
 
-        return view
-    }
 
 
-
-        suspend fun NoteQues(id:Int)= withContext(Dispatchers.IO) {
+        suspend fun NoteQues(id: Int) = withContext(Dispatchers.IO) {
             return@withContext App.noteRepository.listNotes()
         }
 
         override fun shutup() {
             super.shutup()
-            thread?.cancel()
+            job?.cancel()
         }
-
+    }
 }
