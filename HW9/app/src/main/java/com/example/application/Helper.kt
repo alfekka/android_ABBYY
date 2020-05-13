@@ -13,7 +13,7 @@ class AppSqliteOpenHelper(context: Context?) :
     }
 
     override fun onCreate(db: SQLiteDatabase?) {
-        NoteContract.createTable(db)
+        NoteGen.createTable(db)
     }
 
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {

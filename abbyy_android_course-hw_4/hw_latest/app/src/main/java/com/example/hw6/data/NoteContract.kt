@@ -1,9 +1,9 @@
-package com.example.application.data
+package com.example.hw6.data
 
 import android.content.ContentValues
 import android.database.sqlite.SQLiteDatabase
 import android.provider.BaseColumns
-import com.example.application.R
+import com.example.hw6.R
 
 object NoteContract {
 

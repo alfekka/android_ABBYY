@@ -1,4 +1,4 @@
-package com.example.application.data
+package com.example.hw6.data
 
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
@@ -13,7 +13,7 @@ class AppSqliteOpenHelper(context: Context?) :
     }
 
     override fun onCreate(db: SQLiteDatabase?) {
-        NoteGen.createTable(db)
+        NoteContract.createTable(db)
     }
 
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
