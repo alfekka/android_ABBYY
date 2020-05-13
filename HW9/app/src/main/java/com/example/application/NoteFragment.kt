@@ -5,8 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import kotlinx.android.synthetic.main.fragment_note.view.*
 import kotlinx.coroutines.*
+import kotlinx.android.synthetic.main.fragment_note.view.*
 
 //apply plugin: 'kotlin'
 //
@@ -24,9 +24,8 @@ class NoteFragment : Fragment() {
         fun newInstance(id: Int): NoteFragment {
             val fragment = NoteFragment()
             val args = Bundle()
-            if (id != null) {
-                args.putInt(NOTE_ID, id)
-            }
+
+            args.putInt(NOTE_ID, id)
             fragment.arguments = args
             return fragment
         }
@@ -42,7 +41,7 @@ class NoteFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_note, container, false)
     }
 
-    fun getNoteId(): Int? = arguments?.getInt(NOTE_ID)
+//    fun getNoteId(): Int? = arguments?.getInt(NOTE_ID)
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -56,12 +55,12 @@ class NoteFragment : Fragment() {
             }
         }
 
-//    fun getNoteId(): Int? = arguments?.getInt(NOTE_ID)
+    fun getNoteId(): Int? = arguments?.getInt(NOTE_ID)
 
     }
 
     suspend fun NoteQues(id: Int) = withContext(Dispatchers.IO) {
-        return@withContext App.noteRepository.getNoteWithId(id)
+        return@withContext App.noteRepository.getNote(id)
     }
 
     override fun shutup() {

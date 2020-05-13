@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.FragmentManager
+//import javax.swing.text.View
 
 
 class MainActivity : AppCompatActivity(), NoteListFragment.OpenNoteListener {
